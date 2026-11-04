@@ -1,0 +1,422 @@
+/* Estilos do site CE Maria Dalila */
+:root {
+  --preto: #000000;
+  --preto-claro: #0a274615;
+  --branco-claro: #eaf3fb;
+  --laranja: #f2b544;
+  --texto: #263445;
+  --cinza: #657386;
+  --branco: #ffffff;
+  --fundo: #f7f9fc;
+}
+
+/* Base do site CE Maria Dalila */
+* { 
+  box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body { 
+  margin: 0; 
+  font-family: Arial, Helvetica, sans-serif; 
+  color: var(--texto); 
+  line-height: 1.65; 
+  background: var(--branco); 
+}
+
+.container { 
+  width: min(1100px, 90%); 
+  margin: 0 auto; 
+}
+
+.topo { 
+  background: var(--branco); 
+  box-shadow: 0 3px 18px #ffffff; 
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+}
+
+.cabecalho { 
+  min-height: 82px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 20px; 
+}
+
+.marca { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  color: var(--preto); 
+  text-decoration: none; 
+}
+
+.logo { 
+  width: 54px; 
+  height: 54px; 
+  object-fit: contain; 
+}
+
+.marca span { 
+  display: flex; 
+  flex-direction: column; 
+  line-height: 1.3; 
+}
+
+.marca strong { 
+  font-size: 1.05rem; 
+}
+
+.marca small { 
+  color: var(--cinza); 
+  font-size: .78rem; 
+}
+
+nav { 
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
+}
+
+nav a { 
+  color: var(--preto-claro); 
+  text-decoration: none; 
+  font-size: .9rem; 
+  font-weight: 700; 
+}
+
+nav a:hover, .link:hover { 
+  color: #b77b0b; 
+}
+
+.menu-toggle { 
+  display: none; 
+  border: 0; 
+  background: var(--preto); 
+  color: rgb(0, 0, 0); 
+  font-size: 1.4rem; 
+  padding: 7px 12px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+}
+
+.hero { 
+  background: linear-gradient(115deg, #000000, #000000), radial-gradient(circle at 80% 20%, #f2b544, transparent 35%); 
+  color: white; 
+  padding: 100px 0 110px;
+}
+
+.hero-conteudo { 
+  max-width: 1100px; 
+}
+
+.etiqueta { 
+  color: var(--laranja); 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  font-weight: 800; 
+  font-size: .75rem; 
+  margin: 0 0 12px; 
+}
+
+/* Parte do texto do site CE Maria Dalila */
+h1, h2, h3, p { 
+  margin-top: 0; 
+}
+
+h1 { 
+  font-size: clamp(2.5rem, 6vw, 4.5rem); 
+  line-height: 1.08; 
+  margin-bottom: 22px; 
+  max-width: 780px; 
+}
+
+h1 span { 
+  color: var(--laranja); 
+}
+
+.hero p:not(.etiqueta) { 
+  max-width: 620px; 
+  font-size: 1.1rem; 
+  color: #ffffff; 
+  margin-bottom: 30px; 
+}
+
+.botao { 
+  display: inline-block; 
+  background: var(--laranja); 
+  color: var(--preto); 
+  padding: 12px 22px; 
+  border-radius: 7px; 
+  text-decoration: none; 
+  font-weight: 800; 
+  transition: transform .2s, background .2s; 
+}
+
+.botao:hover { 
+  transform: translateY(-2px); 
+  background: #ffd06a; 
+}
+
+.secao { 
+  padding-top: 82px; 
+  padding-bottom: 82px; 
+}
+
+.texto-secao h2, h2 { 
+  color: var(--preto); 
+  font-size: clamp(1.8rem, 3vw, 2.6rem); 
+  line-height: 1.2; 
+  margin-bottom: 20px; 
+}
+
+.texto-secao p { 
+  max-width: 650px; 
+}
+
+.secao:target, .faixa:target { 
+  scroll-margin-top: 100px; 
+}
+
+#sobre { 
+  display: grid; 
+  grid-template-columns: 1.5fr 1fr; 
+  align-items: center; 
+  gap: 55px; 
+}
+
+/* Cartoes do site */
+.cartao { 
+  padding: 26px; 
+  border: 1px solid #ffffff; 
+  border-radius: 14px; 
+  background: white; 
+  box-shadow: 0 8px 25px #ffffff; 
+}
+
+.cartao h3 { 
+  color: var(--preto); 
+  margin: 14px 0 8px; 
+}
+
+.cartao p { 
+  margin-bottom: 0; 
+  color: var(--cinza); 
+}
+
+.destaque { 
+  background: var(--preto-claro); 
+  border: 0; 
+}
+
+.icone { 
+  font-size: 2rem; 
+}
+
+.faixa { 
+  background: var(--fundo); 
+  padding: 76px 0; 
+}
+
+.faixa .container { 
+  max-width: 900px; 
+}
+
+.faixa p:not(.etiqueta) { 
+  color: #000000; 
+}
+
+.aviso { 
+  border-left: 4px solid var(--laranja); 
+  padding: 12px 18px; 
+  background: #fff8e8; 
+  border-radius: 0 8px 8px 0; 
+}
+
+.centro { 
+  text-align: center; 
+  max-width: 760px; 
+  margin: 0 auto 38px; 
+}
+
+.centro .introducao { 
+  color: var(--cinza); 
+}
+
+.grade { 
+  display: grid; 
+  gap: 22px; 
+}
+
+.tres-colunas { 
+  grid-template-columns: repeat(3, 1fr); 
+}
+
+.profissional { 
+  background: var(--preto); 
+  color: white; 
+  padding: 82px 0 35px; 
+}
+
+.profissional h2 { 
+  color: rgb(255, 255, 255); 
+}
+
+.profissional-layout { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 65px; 
+  align-items: center; 
+}
+
+.profissional-layout > div:first-child > p:not(.etiqueta) { 
+  color: #ffffff; 
+}
+
+.botao-claro { 
+  margin-top: 12px; 
+  background: white; 
+}
+
+/* Beneficios do site */
+.lista-beneficios { 
+  display: grid; 
+  gap: 16px; 
+}
+
+.lista-beneficios > div { 
+  display: flex; 
+  gap: 18px; 
+  align-items: flex-start; 
+  padding: 17px; 
+  border: 1px solid #ffffff; 
+  border-radius: 12px; 
+}
+
+.lista-beneficios span { 
+  color: var(--laranja); 
+  font-weight: 900; 
+  font-size: 1.4rem; 
+}
+
+.lista-beneficios p { 
+  margin: 0; 
+  color: #ffffff; 
+}
+
+.lista-beneficios strong { 
+  color: #ffd06a; 
+}
+
+.nota-curso { 
+  margin-top: 45px; 
+  padding: 16px 20px; 
+  background: #ffffff; 
+  border-radius: 9px; 
+  color: #000000; 
+  font-size: .9rem; 
+}
+
+.nota-curso p { 
+  margin: 0; 
+}
+
+.contato-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+.contato-grid a { 
+  color: var(--preto); 
+  overflow-wrap: anywhere; 
+}
+
+.link { 
+  display: inline-block; 
+  margin-top: 14px; 
+  font-weight: 800; 
+  text-decoration: none;
+  width: 200%;
+}
+
+/* Rodape e media do site */
+.rodape { 
+  background: var(--preto-claro); 
+  color: #000000; 
+  padding: 35px 0 0; 
+}
+
+.rodape-conteudo { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 25px; 
+}
+
+.rodape-conteudo p { 
+  margin: 0; 
+  font-size: .9rem; 
+}
+
+.rodape a { 
+  color: var(--laranja); 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.direitos { 
+  margin: 25px 0 0; 
+  padding: 15px; 
+  text-align: center; 
+  background: #061c33; 
+  font-size: .8rem; 
+  color: #ffffff; 
+}
+
+@media (max-width: 850px) {
+  
+  .menu-toggle { 
+    display: block; 
+  }
+
+  nav { 
+    display: none; 
+    position: absolute; 
+    top: 82px; 
+    left: 0; 
+    right: 0; 
+    background: rgb(14, 13, 13); 
+    padding: 20px 5%; 
+    box-shadow: 0 8px 12px #0a274615; 
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  nav.aberto { 
+    display: flex; 
+  }
+  
+  #sobre, .profissional-layout { 
+    grid-template-columns: 1fr; 
+    gap: 30px; 
+  }
+
+  .tres-colunas, .contato-grid { 
+    grid-template-columns: 1fr; 
+  }
+
+  .hero { 
+    padding: 75px 0; 
+  }
+
+  .rodape-conteudo { 
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
